@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-lumina-ivory: #FDFBF7;
+  --color-lumina-beige: #F4F0EA;
+  --color-lumina-dark: #2C2925;
+  --color-lumina-teal: #82A9A3;
+  --color-lumina-wood: #8C6A4F;
+  --color-lumina-light: #FAFAFA;
+  
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Outfit', sans-serif;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth text-lumina-dark bg-lumina-ivory;
+  }
+  
+  body {
+    @apply font-sans antialiased selection:bg-lumina-teal selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium tracking-tight;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl shadow-black/5;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
